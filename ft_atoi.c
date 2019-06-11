@@ -1,32 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 13:23:01 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/11 10:22:04 by kmatulud         ###   ########.fr       */
+/*   Created: 2019/06/11 12:34:46 by kmatulud          #+#    #+#             */
+/*   Updated: 2019/06/11 15:38:19 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+static int	st_isblank(char c)
+{
+	if (c == ' ' || c == '\t' || c == '\n')
+		return (1);
+	if (c == '\v' || c == '\r' || c == '\f')
+		return (1);
+	return (0);
+}
+
+int			ft_atoi(const char *str)
 {
 	int i;
-	int j;
+	int neg;
+	int	ans;
 
 	i = 0;
-	j = 0;
-	while (s1[i] != '\0')
+	neg = 1;
+	while (st_isblank(str[i]) == 1)
 		i++;
-	while (s2[j] != '\0')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		s1[i] = s2[j];
-		j++;
+		if (str[i] == '-')
+			neg = -1;
 		i++;
 	}
-	s1[i] = '\0';
-	return (s1);
+	ans = 0;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		ans = (ans * 10) + (str[i] - '0') * neg;
+		i++;
+	}
+	return (ans);
 }

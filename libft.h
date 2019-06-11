@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 10:30:17 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/05/24 15:45:09 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/11 10:48:47 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strcat(char *dest, const char *src);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
-char	*ft_strdup(const char *src);
+char	*ft_strdup(const char *s1);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *str);
 char	*ft_strncat(char *dest, const char *src, size_t nb);
@@ -44,6 +44,7 @@ char	*ft_strstr(const char *str, const char *to_find);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrev(char *str);
 char	*ft_strrchr(const char *s, int c);
+char    *ft_strstr(const char *haystack, const char *needle);
 char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *b, size_t n);

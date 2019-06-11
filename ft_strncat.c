@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 14:56:46 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/03 15:42:34 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/11 10:23:15 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	int i;
-	int j;
+	size_t j;
 
 	i = 0;
 	j = 0;

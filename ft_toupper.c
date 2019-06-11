@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 12:18:57 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/05/23 12:32:13 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/11 12:31:36 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int	ft_toupper(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
-	return (0);
+	else
+		result = c;
+	return (result);
 }

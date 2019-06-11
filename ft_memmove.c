@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 09:46:46 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/07 15:01:28 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/11 12:34:36 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*dest;
 	char	*src1;
 
-	dest = dst;
+	dest = (char*)dst;
 	src1 = (char *)src;
 	if (src1 < dest)
 	{
@@ -31,5 +31,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			src1--;
 		}
 	}
+	else
+		ft_memcpy(dest, src, len);
 	return (dst);
 }

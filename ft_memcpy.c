@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 09:23:31 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/06 14:05:44 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/11 15:02:35 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	d = dst;
 	s = src;
+
+	if (d == NULL && s == NULL)
+	{
+		return 0;
+	}
 	while (n)
 	{
 		*d = *s;
