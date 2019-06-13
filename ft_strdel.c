@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 11:26:07 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/12 13:15:39 by kmatulud         ###   ########.fr       */
+/*   Created: 2019/06/12 15:03:02 by kmatulud          #+#    #+#             */
+/*   Updated: 2019/06/12 16:12:21 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-int	ft_tolower(int c)
+void	ft_strdel(char **as)
 {
-	int result;
-
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	else
-		result = c;
-	return (result);
+	ft_memdel((void **)as);
 }

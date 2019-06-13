@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 09:07:43 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/05 10:01:21 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/12 14:04:28 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	ft_putstr(char const *s)
 	char *str;
 
 	i = 0;
+	if (!s)
+		return ;
 	str = (char*)s;
 	while (str[i] != '\0')
 	{

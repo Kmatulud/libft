@@ -6,7 +6,7 @@
 #    By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/06 11:52:57 by kmatulud          #+#    #+#              #
-#    Updated: 2019/06/11 15:06:43 by kmatulud         ###   ########.fr        #
+#    Updated: 2019/06/12 16:51:03 by kmatulud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,12 +18,20 @@ CFLAGS = -Wall -Werror -Wextra -I. -c
 
 SRC = 	ft_memset.c \
 		ft_bzero.c \
+		ft_atoi.c \
+		ft_memdel.c \
 		ft_memcpy.c \
 		ft_memchr.c \
 		ft_memccpy.c \
 		ft_memmove.c \
 		ft_memcmp.c \
+		ft_strclr.c \
 		ft_strlen.c \
+		ft_strdel.c \
+		ft_strnew.c \
+		ft_strnstr.c \
+		ft_strcmp.c \
+		ft_strncmp.c \
 		ft_strdup.c \
 		ft_strcpy.c \
 		ft_strncpy.c \
@@ -42,6 +50,8 @@ SRC = 	ft_memset.c \
 		ft_tolower.c \
 		ft_memalloc.c \
 		ft_putchar.c \
+		ft_putnbr.c \
+		ft_putnbr_fd.c \
 		ft_putstr.c \
 		ft_putendl.c \
 		ft_putchar_fd.c \

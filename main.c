@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 11:26:07 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/12 13:15:39 by kmatulud         ###   ########.fr       */
+/*   Created: 2019/06/12 15:28:40 by kmatulud          #+#    #+#             */
+/*   Updated: 2019/06/12 16:00:47 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
+#include <stdio.h>
 
-int	ft_tolower(int c)
+int		main(void)
 {
-	int result;
+	char as;
 
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	else
-		result = c;
-	return (result);
+	as = (**void)ft_memalloc(10)
 }
+
+

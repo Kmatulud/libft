@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 11:26:07 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/12 13:15:39 by kmatulud         ###   ########.fr       */
+/*   Created: 2019/06/12 12:46:55 by kmatulud          #+#    #+#             */
+/*   Updated: 2019/06/12 12:48:16 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+void		ft_putnbr_fd(int n, int fd)
 {
-	int result;
-
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
+	}
+	else if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd(n % 10 + '0', fd);
+	}
 	else
-		result = c;
-	return (result);
+		ft_putchar_fd(n + '0', fd);
 }
