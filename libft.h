@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 10:30:17 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/12 16:16:29 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/13 15:46:50 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ void	ft_putnbr(int nb);
 void	ft_putstr_fd(const char *str, int fd);
 void	ft_putstr(const char *str);
 char	*ft_strcat(char *dest, const char *src);
+void	ft_striter(char *s, void (*f)(char*));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char    *ft_strmap(char const *s, char (*f)(char));
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
