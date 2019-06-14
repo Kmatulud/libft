@@ -6,12 +6,11 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 14:49:24 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/13 15:59:35 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/14 11:21:43 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
@@ -19,17 +18,19 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*s2;
 
 	i = 0;
-	if (!(s2 = (char *)malloc(sizeof(char) * ft_strlen(s) + 1)))
-		return NULL;
-	else
-		s2 = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
-	if (!s)
-		return (NULL);
-	while (s[i] != '\0')
+	if (s && f)
 	{
-		s2[i] = f(s[i]);
-		i += 1;
+		if (!(s2 = (char *)malloc(sizeof(char) * ft_strlen(s) + 1)))
+			return (NULL);
+		else
+			s2 = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
+		while (s[i] != '\0')
+		{
+			s2[i] = f(s[i]);
+			i += 1;
+		}
+		s2[i] = '\0';
+		return (s2);
 	}
-	s2[i] = '\0';
-	return (s2);
+	return (NULL);
 }

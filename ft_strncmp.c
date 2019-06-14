@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 13:44:57 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/12 13:56:08 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/14 10:59:52 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t i;
-	
+
 	i = 0;
 	if (n == 0)
 		return (0);

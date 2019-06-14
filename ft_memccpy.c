@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 10:17:22 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/07 13:41:06 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/14 10:38:14 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,3 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	}
 	return (NULL);
 }
-
-

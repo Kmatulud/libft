@@ -6,7 +6,7 @@
 #    By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/06 11:52:57 by kmatulud          #+#    #+#              #
-#    Updated: 2019/06/13 15:44:56 by kmatulud         ###   ########.fr        #
+#    Updated: 2019/06/14 13:24:52 by kmatulud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,14 @@ SRC = 	ft_memset.c \
 		ft_striter.c \
 		ft_striteri.c \
 		ft_strmap.c \
+		ft_strmapi.c \
+		ft_strequ.c \
+		ft_strnequ.c \
+		ft_strsub.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_strsplit.c \
+		ft_itoa.c \
 		ft_strclr.c \
 		ft_strlen.c \
 		ft_strdel.c \
