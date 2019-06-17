@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 13:17:56 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/17 12:40:29 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/17 12:45:48 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ static	int		ft_int_len(int n)
 		n /= 10;
 		len++;
 	}
+	return (len);
 }
 
 char			*ft_itoa(int n)
@@ -41,7 +42,7 @@ char			*ft_itoa(int n)
 	if (!str)
 		return (NULL);
 	if (n == -2147483648)
-		ft_strcpy(str, -2147483648);
+		ft_strcpy(str, "-2147483648");
 	str[len] = '\0';
 	if (n == 0)
 		str[0] = '0';

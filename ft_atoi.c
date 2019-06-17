@@ -6,42 +6,35 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 12:34:46 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/11 15:38:19 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/17 15:34:17 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	st_isblank(char c)
+int		ft_atoi(const char *str)
 {
-	if (c == ' ' || c == '\t' || c == '\n')
-		return (1);
-	if (c == '\v' || c == '\r' || c == '\f')
-		return (1);
-	return (0);
-}
+	int sign;
+	int tmp;
 
-int			ft_atoi(const char *str)
-{
-	int i;
-	int neg;
-	int	ans;
-
-	i = 0;
-	neg = 1;
-	while (st_isblank(str[i]) == 1)
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	sign = 1;
+	tmp = 0;
+	if (ft_strlen(str) >= 19 && ft_strcmp("9223372036854775807", str) < 0)
+		return (-1);
+	if (ft_strlen(str) >= 20 && ft_strcmp("-9223372036854775807", str) < 0)
+		return (0);
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		if (str[i] == '-')
-			neg = -1;
-		i++;
+		if (*str == '-')
+			sign =  -1;
+		str++;
 	}
-	ans = 0;
-	while (str[i] >= '0' && str[i] <= '9')
+	while (*str && ft_isdigit(*str))
 	{
-		ans = (ans * 10) + (str[i] - '0') * neg;
-		i++;
+		tmp = tmp * 10 + *str - '0';
+		str++;
 	}
-	return (ans);
+	return (tmp * sign);
 }

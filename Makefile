@@ -6,7 +6,7 @@
 #    By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/06 11:52:57 by kmatulud          #+#    #+#              #
-#    Updated: 2019/06/14 13:24:52 by kmatulud         ###   ########.fr        #
+#    Updated: 2019/06/17 14:22:04 by kmatulud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ SRC = 	ft_memset.c \
 		ft_strtrim.c \
 		ft_strsplit.c \
 		ft_itoa.c \
+		ft_isspace.c \
 		ft_strclr.c \
 		ft_strlen.c \
 		ft_strdel.c \

@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 12:47:04 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/17 12:40:15 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/17 12:52:14 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@ static int			ft_nbwords(char const *s, char c)
 
 	i = 0;
 	words = 0;
-	while (*(s + 1))
+	while (*(s + i))
 	{
-		while (*(s + 1) == c)
+		while (*(s + i) == c)
 			i++;
-		if (*(s + 1))
+		if (*(s + i))
 			words++;
-		while (*(s + 1) && *(s + 1) != c)
+		while (*(s + i) && *(s + i) != c)
 			i++;
 	}
 	return (words);
 }
 
-static void			ft_split(char **tab, char const *str, char delimiter)
+static void			ft_split(char **tab, char const *str, char c)
 {
 	int i;
 	int words;
@@ -41,13 +41,13 @@ static void			ft_split(char **tab, char const *str, char delimiter)
 	i = 0;
 	index = 0;
 	len = 0;
-	words = ft_nbwords(str, delimiter);
+	words = ft_nbwords(str, c);
 	while (words - i)
 	{
-		while (str && *(str + index == delimiter))
+		while (str && *(str + index) == c)
 			index++;
-		while (str && *(str + len) && *(str + index + len) != delimiter)
-			i++;
+		while (str && *(str + index + len) && *(str + index + len) != c)
+			len++;
 		tab[i] = ft_strsub(str, index, len);
 		index += len;
 		len = 0;

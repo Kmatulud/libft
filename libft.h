@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 10:30:17 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/14 13:25:09 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/17 14:22:49 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	ft_putchar(char c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_atoi(const char *str);
+int		ft_isspace(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
