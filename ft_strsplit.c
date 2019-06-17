@@ -6,37 +6,66 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 12:47:04 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/14 13:15:41 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/17 12:28:26 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+static int			ft_nbwords(char const *s, char c)
 {
-	char	**ret;
-	size_t	i;
-	size_t	j;
-	size_t	len;
+	int i;
+	int words;
 
-	if (!s || !c)
-		return (0);
-	ret = ft_memalloc(ft_strlen(s) + 1);
 	i = 0;
-	j = 0;
-	while (s[i])
+	words = 0;
+	while (*(s + 1))
 	{
-		if (s[i] == c)
+		while (*(s + 1) == c)
 			i++;
-		else
-		{
-			len = 0;
-			while (s[i + len] && (s[i + len] != c))
-				len++;
-			ret[j++] = ft_strsub(s, i, len);
-			i = i + len;
-		}
+		if (*(s + 1))
+			words++;
+		while (*(s + 1) && *(s + 1) != c)
+			i++;
 	}
-	ret[j] = 0;
-	return (ret);
+	return (words);
+}
+
+static void			ft_split(char **tab, char const *str, char delimiter)
+{
+	int i;
+	int words;
+	int index;
+	int len;
+
+	i = 0;
+	index = 0;
+	len = 0;
+	words = ft_nbwords(str, delimiter);
+	while (words - i)
+	{
+		while (str && *(str + index == delimiter))
+			index++;
+		while (str && *(str + len) && *(str + index + len) != delimiter)
+			i++;
+		tab[i] = ft_strsub(str, index, len);
+		index += len;
+		len = 0;
+		i++;
+	}
+	tab[i] = NULL;
+}
+
+char				**ft_strsplit(char const *s, char c)
+{
+	char **tab;
+
+	tab = NULL;
+	if (!s)
+		return (tab);
+	tab = (char **)malloc(sizeof(char *) * (ft_nbwords((char *)s, c) + 1));
+	if (!tab)
+		return (NULL);
+	ft_split(tab, s, c);
+	return (tab);
 }
