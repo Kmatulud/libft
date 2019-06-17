@@ -6,35 +6,55 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 13:17:56 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/14 13:38:09 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/17 12:25:26 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static	int		ft_int_len(int n)
 {
-	size_t	i;
-	size_t	n_size;
+	int len;
+
+	len = 0;
+	if (n == 0)
+		len++;
+	if (n < 0)
+	{
+		n *= -1;
+		len++;
+	}
+	while (n)
+	{
+		n /= 10;
+		len++;
+	}
+}
+
+char			*ft_itoa(int n)
+{
+	int		len;
 	char	*str;
 
-	i = 0;
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	n_size = ft_strlen(str);
-	if (!(str = (char *)malloc(sizeof(char) * (n_size + 1))))
+	len = ft_int_len(n);
+	str = (char *)malloc(sizeof(char) * len + 1);
+	if (!str)
 		return (NULL);
-	str[n_size] = 0;
+	if (n == -2147483648)
+		ft_strcpy(str, -2147483648);
+	str[len] = '\0';
+	if (n == 0)
+		str[0] = '0';
 	if (n < 0)
 	{
 		str[0] = '-';
 		n *= -1;
-		i += 1;
 	}
-	while (i < n_size--)
+	while (n > 0)
 	{
-		str[n_size] = (n % 10) + '0';
-		n /= 10;
+		str[len - 1] = '0' + (n % 10);
+		n = n / 10;
+		len--;
 	}
 	return (str);
 }
