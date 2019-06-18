@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 09:46:46 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/17 13:11:59 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/18 11:38:46 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (tmp_d == tmp_s)
 		return (tmp_d);
 	if ((tmp_d <= tmp_s) || (tmp_d >= (tmp_s + len)))
-	{
 		while (len > 0)
 		{
 			*(tmp_d++) = *(tmp_s++);
 			len--;
 		}
-	}
 	else
 	{
 		tmp_d += len - 1;

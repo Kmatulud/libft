@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 12:34:46 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/17 15:34:17 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/18 11:39:32 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		ft_atoi(const char *str)
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-			sign =  -1;
+			sign = -1;
 		str++;
 	}
 	while (*str && ft_isdigit(*str))

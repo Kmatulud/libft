@@ -6,13 +6,13 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 12:22:00 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/17 14:10:49 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/18 11:35:08 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const*s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*s3;
 
