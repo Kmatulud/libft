@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 12:22:00 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/21 11:48:03 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/21 12:29:37 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-    size_t	x;
-    size_t	y;
-    size_t	len;
-    char	*str;
+	size_t	i;
+	size_t	j;
+	size_t	len;
+	char	*str;
 
-    x = 0;
-    y = 0;
-    if (!s1 || !s2)
-        return (0);
-    len = ft_strlen(s1) + ft_strlen(s2) + 1;
-    str = (char *)malloc(sizeof(char) * len);
-    if (!str)
-        return (0);
-    while (s1[x] != '\0')
-    {
-        str[x] = s1[x];
-        x++;
-    }
-    while (s2[y] != '\0')
-    {
-        str[x++] = s2[y++];
-    }
-    str[x] = '\0';
-    return (str);
+	i = 0;
+	j = 0;
+	if (!s1 || !s2)
+		return (0);
+	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	str = (char *)malloc(sizeof(char) * len);
+	if (!str)
+		return (0);
+	while (s1[i] != '\0')
+	{
+		str[i] = s1[j];
+		i++;
+	}
+	while (s2[j] != '\0')
+	{
+		str[i++] = s2[j++];
+	}
+	str[i] = '\0';
+	return (str);
 }
