@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 12:22:00 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/21 12:29:37 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/21 12:37:23 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (0);
 	while (s1[i] != '\0')
 	{
-		str[i] = s1[j];
+		str[i] = s1[i];
 		i++;
 	}
 	while (s2[j] != '\0')
