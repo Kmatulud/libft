@@ -6,7 +6,7 @@
 /*   By: kmatulud <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 10:30:17 by kmatulud          #+#    #+#             */
-/*   Updated: 2019/06/25 14:54:29 by kmatulud         ###   ########.fr       */
+/*   Updated: 2019/06/26 09:03:01 by kmatulud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void	ft_putnbr_fd(int nb, int fd);
 void	ft_putnbr(int nb);
 void	ft_putstr_fd(const char *str, int fd);
 void	ft_putstr(const char *str);
+void	ft_putendl(char const *s);
+void	ft_putendl_fd(char const *s, int fd);
 char	*ft_strcat(char *dest, const char *src);
 void	ft_striter(char *s, void (*f)(char*));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
